@@ -1,0 +1,160 @@
+.storyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.storyList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* gap: 10px; */
+  width: 100%;
+}
+
+.storyItem {
+  position: relative; 
+  text-align: center;
+  flex: 0 0 25%;
+  
+  box-sizing: border-box;
+}
+.story {
+  position: relative;
+}
+
+.image {
+  height: 20em;
+  width: 15em;
+  border-radius: 25px;
+  padding: 10px;
+}
+.titles {
+  position: absolute;
+  bottom: 0px;
+  padding: 35px;
+  width: 50%;
+  left: 15%;
+}
+.title {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  
+}
+.description {
+  margin: 0;
+  font-size: 9px;
+  color: white;
+  text-align: left;
+}
+
+
+.editButton {
+  position: absolute;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(1, 1, 1, 0.5);
+  padding: 5px 10px;
+  left: 80px;
+}
+.showMoreButton {
+  background-color: #ff7373;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.showMoreButton:hover {
+  background-color: #ff7373;
+}
+
+@media (max-width: 768px) {
+  .storyItem {
+    padding: 0px;
+    min-width: 25em;
+    text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  width: 10em;
+  }
+
+  .image {
+    width: 15em;
+    max-height: 20em;
+  }
+  .titles {
+    position: absolute;
+    bottom: 0px;
+    padding: 30px;
+    width: 100%;
+    left: 0;
+   
+    
+  }
+  .title,
+  .description {
+    font-size: 12px;
+    
+  }
+
+  .showMoreButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1050px) {
+  .storyItem {
+    text-align: center;
+  /* padding: 25px; */
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 11em;
+  
+  }
+
+  .image {
+    width: 11em;
+    max-height: 17em;
+  }
+  .titles {
+    position: absolute;
+    bottom: 0px;
+    padding: 39px;
+    width: 70%;
+    left: 0;
+  }
+}
+
+@media (min-width: 1050px) and (max-width: 1320px) {
+  .storyItem {
+   padding: 5px;
+    text-align: center;
+   flex: 0 0 25%;
+  box-sizing: border-box;
+  width: 13em;
+  }.image {
+    width: 13em;
+    height: 20em;
+    max-height: 20em;
+  }
+  .titles {
+    position: absolute;
+    bottom: 0px;
+    padding: 35px;
+    width: 60%;
+    left: 20px;
+  }
+ 
+}

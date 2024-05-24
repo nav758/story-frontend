@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #ffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__left h1 {
+  margin: 0;
+  font: DM Sans;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar__button_r {
+  background-color: #ff7373;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.navbar__button_s {
+  background-color: #73abff;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navbar__button:hover {
+  background-color: rgba(193, 31, 31, 0.499);
+}
+.navbar__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.navbar__icon {
+  font-size: 24px;
+  margin-left: 10px;
+}
+.navbar__icon_b {
+  font-size: 13px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__content {
+  position: absolute;
+  justify-content: center;
+  background-color: #f9f9f9;
+  width: 130px;
+  top: 50px;
+  right: -18px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+ z-index: 999;
+  padding: 10px;
+}
+
+.dropdown__content button:hover {
+  background-color: #ddd;
+}
+
+.dropdown.open .dropdown__content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown__content {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+  .navbar__button_r {
+    background-color: #ff7373;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    padding: 8px 25px;
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .navbar__button_s {
+    background-color: #73abff;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    padding: 8px 25px;
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .dropdown__content_t {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .dropdown__content_t h4 {
+    margin-top: 12px;
+  }
+}

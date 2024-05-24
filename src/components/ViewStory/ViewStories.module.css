@@ -1,0 +1,15 @@
+/* ViewStories.module.css */
+
+.storyContainer {
+    width: 320px; /* Adjust the width of the story container */
+    height: 540px; /* Adjust the height of the story container */
+    margin-bottom: 20px; /* Add some space between stories */
+  }
+  
+  .storyContainer .header {
+    justify-content: flex-end; /* Align header content to the bottom */
+    padding: 0 20px; /* Add padding to the header */
+    box-sizing: border-box;
+    bottom: 0px; /* Ensure padding doesn't affect width */
+  }
+  

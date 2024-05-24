@@ -1,0 +1,258 @@
+.container {
+    max-width: 600px;
+    min-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  .popup {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  .popup.show {
+    display: flex; 
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slides {
+    display: flex;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .slide {
+    position: relative;
+    width: 4rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    gap: 2px;
+    text-align: center;
+    border: 2px solid #ccc; /* Default border color */
+  }
+  
+  .slide.active {
+    border-color: #007bff; /* Change border color for active slide */
+  }
+  
+  .popup_button_cancel {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    border-radius: 50%;
+    color: #ff0000;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .close{
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    border-radius: 50%;
+    color: #ff0000;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .info1{
+    position: absolute;
+    bottom: 70px;
+    right: 5px;
+    font-size: 9px;
+  }
+  .info2{
+    font-size: 9px;
+    width: 120px;
+    height: 0;
+    margin-left: 10px;
+  }
+
+  .Addslide {
+    width: 4rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    gap: 2px;
+    background-color: #fff;
+    border: none;
+    color: black;
+    font-weight: 550;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 2.5em;
+  }
+  
+  input[type="text"],
+  textarea,select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  
+ .nextButtonContainer {
+    background-color: #73abff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 25px;
+  margin-top:50px;
+  margin-left: 10px;
+  cursor: pointer;
+  }
+ .previousButtonContainer {
+    background-color: #7EFF73;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 25px;
+  margin-top:50px;
+  cursor: pointer;
+  }
+  
+  .postButtonContainer {
+    background-color: #FF7373;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 25px;
+  margin-top:50px;
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  }
+  
+  .minimumSlidesWarning {
+    margin-top: 20px;
+    color: #dc3545;
+  }
+  
+  .addSlideButtonContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+      height: 500px;
+      min-width: 0;
+      
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+  .mViwe{
+    display: flex;gap: 20px;
+  }
+    .slides {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .postButtonContainer {
+      background-color: #FF7373;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 50px;
+      border: none;
+      padding: 8px 25px;
+      margin-top:50px;
+      cursor: pointer;
+      position: absolute;
+      right: 140px;
+      bottom: 50px;
+      }
+      
+    .slide {
+      margin-bottom: 10px;
+      height: 40px;
+      font-size: 0px;
+      text-align: center;
+    }
+  
+    .slide h6 {
+      margin: 0;
+      font-size: 12px;
+      height: 0px;
+      padding-top: 13px;
+      
+    }
+  
+    .popup_button_cancel {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border-radius: 50%;
+        color: #ff0000;
+        border: none;
+        background-color: transparent;
+        font-size: 15px;
+        cursor: pointer;
+      }
+   
+
+    .formGroup {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    
+  
+    .close {
+      position: fixed;
+      font-size: 25px;
+    }
+  }
