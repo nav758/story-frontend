@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "../pages/home.module.css";
 import { IoReorderThree } from "react-icons/io5";
 import Register from "../components/Register/Register";
@@ -6,11 +6,13 @@ import Login from "../components/Login/Login";
 import Category from "../components/Category/Category";
 import ShowStory from "../components/ShowStroy/ShowStory"
 import ViewStories from "../components/ViewStory/ViewStory";
+ import {SelectedItemContext } from "../utils/UserContext";
 function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 600);
+  const { selectedItem } = useContext(SelectedItemContext);
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -85,7 +87,22 @@ function Home() {
         {showLogin && <Login onClose={() => setShowLogin(false)} />}
       </nav>
       <Category />
-      <ShowStory />
+      <div>
+        {["", "Food", "Health and Fitness", "Movie", "Travel", "Education"].map(
+          (category) => (
+            <div
+              key={category}
+              style={{
+                display:
+                  !selectedItem || selectedItem === category ? "block" : "none",
+              }}
+            >
+              {<h1>{category === "" ? "All" : category}</h1>}
+              <ShowStory setSelectedItemContext={category} />
+            </div>
+          )
+        )}
+      </div>
       {/* <ViewStories /> */}
     </>
   );
